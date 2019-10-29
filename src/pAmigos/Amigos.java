@@ -22,6 +22,23 @@ public class Amigos {
     private static ArrayList<String> vLineasErroneas = new ArrayList<String>();
 
     /*
+     * Método que cuenta las ocurrencias de una cadena dentro de otra cadena
+     * @Param buscar Recibe como parámetro la cadena a buscar.
+     * @Param texto Recibe como parámetro el texto donde buscar.
+     * @Param regresa el número de ocurrencias de la cadena indicada.
+     */
+    public static int contarOcurrencias(String buscar, String texto) {
+        Pattern pattern = Pattern.compile(buscar);
+        Matcher matcher = pattern.matcher(texto);
+
+        int ocurrencias = 0;
+        while (matcher.find()) {
+            ocurrencias++;
+        }
+        return ocurrencias;
+    }
+
+    /*
      * Método que lee un archivo de texto que contiene los datos de diferentes personas
      * @Param archivo Recibe como parámetro la ruta al archivo.
      * @Param return regresa un ArrayList conteniendo las líneas válidas
@@ -77,7 +94,7 @@ public class Amigos {
             cadena = cadena.strip().replaceAll("[ ]{2,}", " ");
             cadenaOriginal = cadena;
             cadena = cadena.toLowerCase();
-            if ((Pattern.matches(regexValidarAmigoPosPos,cadena)) || (Pattern.matches(regexValidarAmigoPosDatos,cadena)) || (Pattern.matches(regexValidarAmigoDatosPos,cadena))  || (Pattern.matches(regexValidarAmigoDatosDatos,cadena)) || (Pattern.matches(regexValidarAmigoPosNivel,cadena)) || (Pattern.matches(regexValidarAmigoDatosNivel,cadena))) {
+            if ((contarOcurrencias("amigo",cadena) <= 1) && ((Pattern.matches(regexValidarAmigoPosPos,cadena)) || (Pattern.matches(regexValidarAmigoPosDatos,cadena)) || (Pattern.matches(regexValidarAmigoDatosPos,cadena))  || (Pattern.matches(regexValidarAmigoDatosDatos,cadena)) || (Pattern.matches(regexValidarAmigoPosNivel,cadena)) || (Pattern.matches(regexValidarAmigoDatosNivel,cadena)))) {
                 vLineas.add(cadenaOriginal);
             } else {
                 vLineasErroneas.add(cadenaOriginal);
