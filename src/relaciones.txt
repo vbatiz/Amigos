@@ -1,0 +1,23 @@
+1 amigo 2
+1 amigo 6
+1 amigo 8
+6 amigo 9
+7 amigo 10
+8 amigo 11
+11 amigo 10
+Victor,Batiz,M,12/03/1974 amigo 3
+5 amigo Saul,Palazuelos,M,07/08/1995
+Saul,Palazuelos,M,07/08/1995 amigo Marcos,Plata,M,31/10/1986
+amigos 1 3
+amigos 1 1
+amigos 1 2
+3 eliminar 1
+1 amigos 2
+2 amigos 1
+Victor,Batiz,M,12/03/1974 amigo 3
+Victor,Batiz,M,12/03/1974 amigos 3
+Victor,Batiz,M,12/03/1974 eliminar 3
+Victor,Batiz,M,12/03/1974 amigos 3
+amigos Victor,Batiz,M,12/03/1974 1
+3 elimina 1
+amigos Glenn,Della Rocca,M,19/02/1994 10
